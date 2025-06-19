@@ -18,6 +18,13 @@
         <option value="price">Price (Low to High)</option>
         <option value="rating">Rating (High to Low)</option>
       </select>
+
+      <select id="brandFilter" onchange="applyFilters()">
+        <option value="">All Brands</option>
+      </select>
+
+      <input type="number" id="minPrice" placeholder="Min Price" oninput="applyFilters()">
+      <input type="number" id="maxPrice" placeholder="Max Price" oninput="applyFilters()">
     </div>
 
     <div id="productList" class="product-list"></div>
