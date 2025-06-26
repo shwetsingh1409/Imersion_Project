@@ -1,0 +1,23 @@
+<% layout('layout') %>
+
+<h1>Welcome, <%= user.username %>!</h1>
+<a class="btn btn-danger" href="/api/auth/logout">Logout</a>
+<a class="btn btn-success" href="/vehicles/new">+ Add Vehicle</a>
+
+<hr>
+<h2>All Vehicles</h2>
+<div class="row">
+  <% vehicles.forEach(v => { %>
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <img src="<%= v.image %>" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title"><%= v.vehicleName %></h5>
+          <p class="card-text"><%= v.desc %></p>
+          <p>Brand: <%= v.brand %></p>
+          <p>Price: ₹<%= v.price %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

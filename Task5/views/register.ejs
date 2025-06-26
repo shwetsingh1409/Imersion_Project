@@ -1,0 +1,23 @@
+<% layout('layout') %>
+
+<h2>Register</h2>
+<form action="/api/auth/register" method="POST">
+  <div class="mb-3">
+    <label>Username</label>
+    <input class="form-control" name="username" required />
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input class="form-control" name="email" type="email" required />
+  </div>
+  <div class="mb-3">
+    <label>Age</label>
+    <input class="form-control" name="age" type="number" required />
+  </div>
+  <div class="mb-3">
+    <label>Password</label>
+    <input class="form-control" type="password" name="password" required />
+  </div>
+  <button class="btn btn-primary">Register</button>
+  <a href="/login">Login</a>
+</form>

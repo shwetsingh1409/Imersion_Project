@@ -1,0 +1,26 @@
+<% layout('layout') %>
+
+<h2>Add New Vehicle</h2>
+<form action="/api/vehicles" method="POST">
+  <div class="mb-3">
+    <label>Vehicle Name</label>
+    <input class="form-control" name="vehicleName" required />
+  </div>
+  <div class="mb-3">
+    <label>Brand</label>
+    <input class="form-control" name="brand" required />
+  </div>
+  <div class="mb-3">
+    <label>Price</label>
+    <input class="form-control" type="number" name="price" required />
+  </div>
+  <div class="mb-3">
+    <label>Image URL</label>
+    <input class="form-control" name="image" required />
+  </div>
+  <div class="mb-3">
+    <label>Description</label>
+    <textarea class="form-control" name="desc" required></textarea>
+  </div>
+  <button class="btn btn-success">Add Vehicle</button>
+</form>
